@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isPrime(num) {
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return num > 1;
+    }
+
+    function sumOfListPrime(n) {
+        let sum = 0;
+        for (let i = 2; i < n; i++) {
+            if (isPrime(i)) {
+                sum += i;
+
+            }
+        }
+        console.log("Tổng các số nguyên tố nhỏ hơn "+n+" là: " + sum);
+    }
+
+    let n = 20;
+    sumOfListPrime(n);
+
+</script>
+</html>
